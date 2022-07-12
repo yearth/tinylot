@@ -1,5 +1,5 @@
 {
-  "name": "@packages/tinylot-functions",
+  "name": "@tinylot/functions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

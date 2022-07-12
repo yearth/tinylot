@@ -1,5 +1,5 @@
 {
-  "name": "@packages/tinylot-shared",
+  "name": "@tinylot/shared",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
