@@ -1,3 +1,3 @@
-import { fs } from '@tinylot/shared';
+import { fs, resolve } from '@tinylot/shared';
 
-console.log(fs);
+console.log(fs, resolve);
