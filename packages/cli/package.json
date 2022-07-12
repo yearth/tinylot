@@ -9,8 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
+    "typescript": "^4.7.4",
     "yargs": "^17.5.1"
+  },
+  "dependencies": {
+    "@tinylot/shared": "workspace:"
   }
 }
