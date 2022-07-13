@@ -1,11 +1,16 @@
-import { fs } from '@tinylot/shared';
+import { PACKAGE_NAME, PACKAGE_VERSION } from './constants';
 
 export default async function main() {
-  console.log('hello world!');
-  console.log(fs);
-  //   const versionChecker = new VersionChecker({
-  //     packageName: "",
-  //     currentPkgVersion: "",
-  //     timeout: 3000
-  //   });
+  // const versionChecker = new VersionChecker({
+  //   packageName: '',
+  //   currentPkgVersion: '',
+  //   timeout: 3000,
+  // });
+  const config = {
+    packageName: PACKAGE_NAME,
+    currentPkgVersion: PACKAGE_VERSION,
+    timeout: 3000,
+  };
+
+  console.log(config);
 }

@@ -1,2 +1,2 @@
 export * as fs from 'fs-extra';
-export { resolve } from 'path';
+export { resolve, join } from 'path';
