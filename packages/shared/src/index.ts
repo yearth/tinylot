@@ -1,2 +1,2 @@
 export * as fs from 'fs-extra';
-export { resolve, join } from 'path';
+export { resolve, join, isAbsolute } from 'path';

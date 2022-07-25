@@ -1,5 +1,7 @@
 import { fs, join } from '@tinylot/shared/src';
 
+import { Command } from '../types';
+
 const files = fs
   // 1. 读取 commands 下所有文件
   .readdirSync(__dirname)
@@ -26,4 +28,4 @@ const commands = files.map(filename => {
   };
 });
 
-export default commands;
+export default commands as Command[];

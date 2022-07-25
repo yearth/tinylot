@@ -16,6 +16,7 @@ importers:
 
   packages/cli:
     specifiers:
+      '@tinylot/functions': workspace:^1.0.0
       '@tinylot/shared': 'workspace:'
       '@tinylot/utils': workspace:^1.0.0
       '@types/yargs': ^17.0.10
@@ -23,6 +24,7 @@ importers:
       typescript: ^4.7.4
       yargs: ^17.5.1
     dependencies:
+      '@tinylot/functions': link:../functions
       '@tinylot/shared': link:../shared
       '@tinylot/utils': link:../utils
     devDependencies:

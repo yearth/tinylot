@@ -18,6 +18,13 @@ export default abstract class AbstractCommand<Argv extends any = any> {
    * 子命令执行逻辑
    */
   abstract run(): any;
+
+  /**
+   * 命令行参数
+   */
+  get argv(): Argv {
+    return this.ctx.argv;
+  }
 }
 
 export interface CommandMetadata {
@@ -44,4 +51,13 @@ export interface CommandMetadata {
    * ]
    */
   examples?: string[];
+}
+
+export interface Command<Argv = any> extends CommandMetadata {
+  /**
+   * 子命令实例
+   */
+  module: {
+    new (argv: Argv): AbstractCommand<Argv>;
+  };
 }

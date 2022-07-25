@@ -16,6 +16,7 @@
     "yargs": "^17.5.1"
   },
   "dependencies": {
+    "@tinylot/functions": "workspace:^1.0.0",
     "@tinylot/shared": "workspace:",
     "@tinylot/utils": "workspace:^1.0.0"
   }
