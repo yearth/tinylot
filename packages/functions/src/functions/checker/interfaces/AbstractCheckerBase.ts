@@ -20,7 +20,8 @@ export abstract class AbstractCheckerBase implements IFunction {
    * @param dir 存放规则集的文件夹目录
    */
   protected loadRules(dir: string) {
-    console.log('load rules', dir);
+    let rules = require(dir);
+    console.log(rules);
   }
 
   abstract run(): Record<string, any>;
