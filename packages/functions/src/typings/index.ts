@@ -1,0 +1,1 @@
+export { IFunction } from './function';

@@ -1,15 +1,15 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "experimentalDecorators": true,
-        "outDir": "dist",
-        "incremental": true,
-        "allowJs": true
-    },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "./src/**/*.test.ts"
-    ]
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "incremental": true,
+    "allowJs": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./src/**/*.test.ts"
+  ]
 }

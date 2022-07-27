@@ -1,1 +1,1 @@
-export { CheckerTypes } from './checker';
+export { CheckerTypes, FileChecker } from './checker';

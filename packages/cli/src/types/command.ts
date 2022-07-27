@@ -10,7 +10,7 @@ export default abstract class AbstractCommand<Argv extends any = any> {
    */
   ctx: Context<Argv>;
 
-  constants(argv: Argv) {
+  constructor(argv: Argv) {
     this.ctx = createContext<Argv>(argv);
   }
 

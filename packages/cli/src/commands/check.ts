@@ -1,7 +1,7 @@
+import { CheckerTypes, FileChecker } from '@tinylot/functions';
 import { isAbsolute, join } from '@tinylot/shared';
 
 import AbstractCommand from '../types/command';
-import { CheckerTypes } from '@tinylot/functions';
 import { Command } from '../decorators';
 
 interface Argv {
@@ -14,8 +14,7 @@ interface Argv {
   examples: ['# 执行代码检查', 'check'],
 })
 export default class CheckCommand extends AbstractCommand<Argv> {
-  // TODO: file checker
-  private fileChecker: any;
+  private fileChecker: FileChecker;
 
   /**
    * 计算当前工作目录
@@ -42,9 +41,10 @@ export default class CheckCommand extends AbstractCommand<Argv> {
    */
   private async initCheckers() {
     const args: Omit<CheckerTypes.Params, 'checkerType'> = {
-      workDir: this.getCwd(this.argv.path),
+      workDir: this.getCwd(this?.argv?.path),
     };
 
-    // this.fileChecker = new FileChecker({ ...args });
+    this.fileChecker = new FileChecker({ ...(args ?? {}) });
+    this.fileChecker.init();
   }
 }
