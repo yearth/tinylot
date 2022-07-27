@@ -34,6 +34,13 @@ export default class CheckCommand extends AbstractCommand<Argv> {
   async run() {
     // 初始化检查器
     await this.initCheckers();
+
+    // 打印规则集
+    this.printRules();
+
+    // 执行检查
+    const fileCheckResult = await this.fileChecker.run();
+    console.log('fileCheckResult', fileCheckResult);
   }
 
   /**
@@ -46,5 +53,13 @@ export default class CheckCommand extends AbstractCommand<Argv> {
 
     this.fileChecker = new FileChecker({ ...(args ?? {}) });
     this.fileChecker.init();
+  }
+
+  /**
+   * 打印规则集
+   */
+  private printRules() {
+    const rules = [...this.fileChecker.getRules()];
+    console.table(rules);
   }
 }
