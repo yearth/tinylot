@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cli": "NODE_ENV=development ts-node packages/cli/bin/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
+    "@eggjs/tsconfig": "^1.1.0",
+    "jest": "^28.1.2",
+    "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   }
 }

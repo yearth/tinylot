@@ -9,8 +9,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
+    "@types/yargs": "^17.0.10",
+    "jest": "^28.1.2",
+    "typescript": "^4.7.4",
     "yargs": "^17.5.1"
+  },
+  "dependencies": {
+    "@tinylot/functions": "workspace:^1.0.0",
+    "@tinylot/shared": "workspace:",
+    "@tinylot/utils": "workspace:^1.0.0"
   }
 }
