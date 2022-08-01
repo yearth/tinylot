@@ -10,4 +10,8 @@ export abstract class AbstractRuleBase {
     };
     console.log('this.metadata', this.metadata);
   }
+
+  getCode() {
+    return `rule code`;
+  }
 }

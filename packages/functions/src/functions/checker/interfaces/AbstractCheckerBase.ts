@@ -17,6 +17,9 @@ export abstract class AbstractCheckerBase implements IFunction {
     this.args = args;
   }
 
+  /**
+   * 初始化检查器
+   */
   init() {
     this.loadRules(RULES_DIR);
   }

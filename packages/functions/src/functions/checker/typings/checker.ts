@@ -5,4 +5,9 @@ export namespace CheckerTypes {
      */
     workDir: string;
   }
+
+  /**
+   * 检查类型: 文件规则 | 文件夹规则
+   */
+  export type CheckerType = 'file' | 'folder';
 }
